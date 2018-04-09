@@ -30,6 +30,14 @@ app.get("/greeting/:name", (req, res) => {
 });
 
 
+// Tip Calculator
+
+// Your app should have a route of '/tip' and it should expect 2 params. One should be total and one should be tipPercentage.
+
+
+app.get("/tip/:total/:tipPercentage", (req, res) => {
+	res.send(req.params.total / req.params.tipPercentage)
+});
 
 
 
