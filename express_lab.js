@@ -36,8 +36,26 @@ app.get("/greeting/:name", (req, res) => {
 
 
 app.get("/tip/:total/:tipPercentage", (req, res) => {
-	res.send(req.params.tipPercentage)
+
+	const total = parseInt(req.params.total)
+
+	const tipPercentage = parseInt(req.params.tipPercentage)
+
+	const finalAmount = ((total * tipPercentage) / 100).toString()
+
+	res.send(finalAmount)
+
+
 });
+
+
+// const calc = total * tipPercentage
+
+//  need total * tip % = totalTip
+
+// need to turn into number
+	
+
 
 
 
